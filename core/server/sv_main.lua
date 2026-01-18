@@ -12,7 +12,7 @@ AddEventHandler('vinDragStrip:sv_JoinDragRace', function(raceId)
     local src = source
 
     if #inDragStrip >= Config.DragStrip[1]["JoinRace"].maxplayers then
-        TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = "error", text = "There is already an ongoing race!"})
+        TriggerClientEvent('ox_lib:notify', src, {type = "error", description = "There is already an ongoing race!"})
         return
     end
 

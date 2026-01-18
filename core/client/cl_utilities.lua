@@ -29,8 +29,8 @@ end,
     PlayAnim = function(ped, ad, anim, ...) -- "..." in the parameter indicate functions that have a variable number of arguments.
         TaskPlayAnim(ped,ad,anim,...)
 end,
-    Notify = function(type, text) -- mythic notification function.
-        exports['mythic_notify']:SendAlert(type, text)
+    Notify = function(type, text) -- ox_lib notification function.
+        lib.notify({type = type, description = text})
 end,
     SpawnObject = function(objname, obj) -- Spawn Object function
         local ped = Utils.LocalPed()
